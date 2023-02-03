@@ -1,0 +1,684 @@
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Установите последнюю версию PowerShell для новых функций и улучшения! https://aka.ms/PSWindows
+
+PS C:\Users\fyyfm\PycharmProjects\pythonProject3> python -m venv venv
+PS C:\Users\fyyfm\PycharmProjects\pythonProject3> venv/bin/activate
+venv/bin/activate : Имя "venv/bin/activate" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильность написания имени, а также наличи
+е и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ venv/bin/activate
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (venv/bin/activate:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\fyyfm\PycharmProjects\pythonProject3> venv\scripts\activate
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3> pip install django
+Collecting django
+  Using cached Django-4.1.6-py3-none-any.whl (8.1 MB)
+Collecting tzdata
+  Using cached tzdata-2022.7-py2.py3-none-any.whl (340 kB)
+Collecting asgiref<4,>=3.5.2
+  Using cached asgiref-3.6.0-py3-none-any.whl (23 kB)
+Collecting sqlparse>=0.2.2
+  Using cached sqlparse-0.4.3-py3-none-any.whl (42 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.6.0 django-4.1.6 sqlparse-0.4.3 tzdata-2022.7
+
+[notice] A new release of pip available: 22.2.2 -> 23.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3> django-admin startproject NewsPaper
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3> cd NewsPaper
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> py -m django startapp 'news'       
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py startap news
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 19, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 20, in Category
+    name = models.Charfield(max_lenght=64, unique=True)
+AttributeError: module 'django.db.models' has no attribute 'Charfield'. Did you mean: 'CharField'?
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py startap news
+Unknown command: 'startap'. Did you mean startapp?
+Type 'manage.py help' for usage.
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py startap news
+Unknown command: 'startap'. Did you mean startapp?
+Type 'manage.py help' for usage.
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py startapp news
+CommandError: 'news' conflicts with the name of an existing Python module and cannot be used as an app name. Please try another name.
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py startap news
+Unknown command: 'startap'. Did you mean startapp?
+Type 'manage.py help' for usage.
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py startap news
+Unknown command: 'startap'. Did you mean startapp?
+Type 'manage.py help' for usage.
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.ru startapp newap
+C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\python.exe: can't open file 'C:\\Users\\fyyfm\\PycharmProjects\\pythonProject3\\NewsPaper\\manage.ru': [Errno 2] No such file or directory
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py punserver
+Unknown command: 'punserver'. Did you mean runserver?
+Type 'manage.py help' for usage.
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 03, 2023 - 19:34:12
+Django version 4.1.6, using settings 'NewsPaper.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\commands\runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 398, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 19, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 20, in Category
+    name = models.Charfield(max_lenght=64, unique=True)
+AttributeError: module 'django.db.models' has no attribute 'Charfield'. Did you mean: 'CharField'?
+C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\commands\runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 398, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 19, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 20, in Category
+    name = models.Charfield(max_lenght=64, unique=True)
+AttributeError: module 'django.db.models' has no attribute 'Charfield'. Did you mean: 'CharField'?
+C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\commands\runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 398, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 19, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 20, in Category
+    name = models.CharField(max_lenght=64, unique=True)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1121, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> py manage.py makemigrations
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 19, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 20, in Category
+    name = models.CharField(max_lenght=64, unique=True)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1121, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> py manage.py makemigrations
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 19, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 20, in Category
+    name = models.CharField(max_lenght=64, unique=True)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1121, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py migrate
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 19, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 20, in Category
+    name = models.CharField(max_lenght=64, unique=True)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1121, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+строка:1 знак:27
++ TypeError: Field.__init__() got an unexpected keyword argument 'max_l ...
++                           ~
+После ''('' ожидалось выражение.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+строка:1 знак:27
++ TypeError: Field.__init__() got an unexpected keyword argument 'max_l ...
++                           ~
+После ''('' ожидалось выражение.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+строка:1 знак:27
++ TypeError: Field.__init__() got an unexpected keyword argument 'max_l ...
++                           ~
+После ''('' ожидалось выражение.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py migrate  
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 19, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 20, in Category
+    name = models.CharField(max_lenght=64, unique=True)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1121, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py migrate
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\apps\config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\fyyfm\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 16, in <module>
+    class Category(models.Model):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper\news\models.py", line 17, in Category
+    name = models.CharField(max_lenght=64, unique=True)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1121, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'max_lenght'
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> Field.__init__() got an unexpected keyword argument 'max_lenght'
+строка:1 знак:16
++ Field.__init__() got an unexpected keyword argument 'max_lenght'
++                ~
+После ''('' ожидалось выражение.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py makemigration
+Unknown command: 'makemigration'. Did you mean makemigrations?
+Type 'manage.py help' for usage.
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py makemigrations 
+Migrations for 'news':
+  news\migrations\0001_initial.py
+    - Create model Author
+    - Create model Category
+    - Create model Post
+    - Create model PostCategory
+    - Add field postCategory to post
+    - Create model Comment
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py migrate 
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, news, sessions
+Running migrations:
+  Applying news.0001_initial... OK
+(venv) PS C:\Users\fyyfm\PycharmProjects\pythonProject3\NewsPaper> python manage.py shell
+Python 3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from newapp.models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'newapp'
+>>> from news.models import *
+>>> u1 = User.objects.create_user(username='Senya')
+>>> u2 = User.objects.create_user(username='Senya')
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\contrib\auth\models.py", line 161, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\contrib\auth\models.py", line 155, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
+>>> u2 = User.objects.create_user(username='Eva')
+>>> u2
+<User: Eva>
+>>> Author.objects.create(authorUser=u1)
+<Author: Author object (1)>
+>>> Author.objects.create(authorUser=u1)
+Traceback (most recent call last):
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: news_author.authorUser_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\fyyfm\PycharmProjects\pythonProject3\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: news_author.authorUser_id
+>>> Author.objects.create(authorUser=u2)
+<Author: Author object (2)>
+>>> Category.objects.create(name='IT')
+<Category: Category object (1)>
+>>> Category.objects.create(name='food')
+<Category: Category object (2)>
+>>> Category.objects.create(name='sport')
+<Category: Category object (3)>
+>>> Category.objects.create(name='shoes')
+<Category: Category object (4)>
+>>> author = Author.objects.get(id=1)
+>>> author
+<Author: Author object (1)>
+>>> Post.objects.create(author=author, categoryType='NW', title=
+... Post.objects.create(author=author, categoryType='NW', title=
+... 
+KeyboardInterrupt
+>>> Post.objects.create(author=author, categoryType='NW', title='sometitle', text='sometext')
+<Post: Post object (1)>
+>>> Post.objects.create(author=author, categoryType='AR', title='sometitle_1', text='sometext_1)
+  File "<console>", line 1
+    Post.objects.create(author=author, categoryType='AR', title='sometitle_1', text='sometext_1)
+                                                                                    ^
+SyntaxError: incomplete input
+>>> Post.objects.get(id=1).postCategory.add(Category.objects.get(id=1))                                        
+>>> author = Author.objects.get(id=1)
+>>> Post.objects.create(author=author, categoryType='AR', title='sometitle_1', text='secondtext
+  File "<console>", line 1
+    Post.objects.create(author=author, categoryType='AR', title='sometitle_1', text='secondtext
+                                                                                    ^
+SyntaxError: incomplete input
+>>> Post.objects.create(author=author, categoryType='AR', title='secondtitle', text='secondtext')     
+<Post: Post object (2)>
+>>> Post.objects.create(author=author, categoryType='AR', title='thirdtitle', text='thirdtext')       
+<Post: Post object (3)>
+>>> Post.objects.get(id=2).postCategory.add(Category.objects.get(id=2)) 
+>>> Post.objects.get(id=3).postCategory.add(Category.objects.get(id=3))  
+>>> Post.objects.get(id=3).postCategory.add(Category.objects.get(id=4)) 
+>>> Comment.objects.create(commentPost=Post.objects.get(id=1), commentUser=Author.objects.get(id=1).authorUser, text='anytextbyauthor')
+<Comment: Comment object (1)>
+>>> Comment.objects.create(commentPost=Post.objects.get(id=2), commentUser=Author.objects.get(id=2).authorUser, text='secondtextbyauthor')
+<Comment: Comment object (2)>
+>>> Comment.objects.create(commentPost=Post.objects.get(id=3), commentUser=Author.objects.get(id=1).authorUser, text='thirdtextbyauthor')   
+<Comment: Comment object (3)>
+>>> Comment.objects.create(commentPost=Post.objects.get(id=1), commentUser=Author.objects.get(id=2).authorUser, text='fourthtextbyauthor')  
+<Comment: Comment object (4)>
+>>> Comment.objects.get(id=1).like()
+>>> CommentComment.objects.get(id=1).like()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'CommentComment' is not defined
+>>> Comment.objects.get(id=1).rating
+1
+>>> Comment.objects.get(id=1).dislike()
+>>> Comment.objects.get(id=1).rating
+0
+>>> Comment.objects.get(id=1).rating
+0
+>>> Comment.objects.get(id=1).like()
+>>> Comment.objects.get(id=1).rating
+1
+>>> Comment.objects.get(id=2).dislike()  
+>>> Comment.objects.get(id=2).rating  
+-1
+>>> Comment.objects.get(id=1).like()
+>>> Comment.objects.get(id=1).like()
+>>> Comment.objects.get(id=1).rating
+3
+>>> Autor.object.get(id=1)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Autor' is not defined
+>>> Author.object.get(id=1) 
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Author' has no attribute 'object'
+>>> Author.objects.get(id=1) 
+<Author: Author object (1)>
+>>> a = Author.object.get(id=1)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Author' has no attribute 'object'
+>>> a = Author.objects.get(id=1) 
+>>> a.update_rating()
+>>> a.ratingAuthor
+3
+>>> Postt.objects.get(id=1).like()   
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Postt' is not defined
+>>> Post.objects.get(id=1).like()    
+>>> a.update_rating()
+>>> a.ratingAuthor
+6
+>>> a = Author.objects.order_by('-ratingAuthor')
+>>> for i in a:
+...     i.ratingAuthor
+...     i.authorUser.username
+... 
+6
+'Senya'
+0
+'Eva'
+
+
+
+п.10
+>>> a = Author.objects.order_by('-ratingAuthor')[:1]
+>>> a
+<QuerySet [<Author: Author object (1)>]>
+>>> for i in a:
+...     i.ratingAuthor
+...     i.authorUser.username
+... 
+6
+'Senya'
+>>>
+
+a = Post.objects.order_by('-rating')[:1] 
+>>> a
+<QuerySet [<Post: Post object (1)>]>
+>>> for i in a:
+...     i.author      
+...     i.rating 
+...     i.title
+...     i.text
+
+<Author: Author object (1)>
+2
+'sometitle'
+'sometext'
+>>>
+
+
+
+>>> Comment.objects.all().values('commentPost', 'commentUser')
+<QuerySet [{'commentPost': 1, 'commentUser': 1}, {'commentPost': 2, 'commentUser': 2}, {'commentPost': 3, 'commentUser': 1}, {'commentPost': 1, 'commentUser': 2}]>
+>>>
+
+
+>>> Comment.objects.all().values('dateCreation', 'commentUser', 'rating', 'text')      
+<QuerySet [{'dateCreation': datetime.datetime(2023, 2, 3, 13, 53, 30, 118257, tzinfo=datetime.timezone.utc), 'commentUser': 1, 'rating': 3, 'text': 'anytextbyauthor'}, {'dateCreation':
+ datetime.datetime(2023, 2, 3, 13, 55, 10, 134877, tzinfo=datetime.timezone.utc), 'commentUser': 2, 'rating': -1, 'text': 'secondtextbyauthor'}, {'dateCreation': datetime.datetime(2023
+, 2, 3, 13, 56, 14, 482178, tzinfo=datetime.timezone.utc), 'commentUser': 1, 'rating': 0, 'text': 'thirdtextbyauthor'}, {'dateCreation': datetime.datetime(2023, 2, 3, 13, 57, 34, 612196, tzinfo=datetime.timezone.utc), 'commentUser': 2, 'rating': 0, 'text': 'fourthtextbyauthor'}]>
+
